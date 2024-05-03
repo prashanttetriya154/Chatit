@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/dialogbgcolor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.airbnb.lottie.LottieAnimationView
+    android:layout_width="120dp"
+    android:layout_height="match_parent"
+    app:lottie_autoPlay="true"
+    app:lottie_loop="true"
+    app:lottie_rawRes="@raw/lodinganimation"/>
+   <LinearLayout
+       android:layout_width="180dp"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="center">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:text="Uploding.."
+           android:textColor="@color/cursur"
+           android:textSize="30sp"
+           android:gravity="center"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Plese Wait !"
+           android:id="@+id/dialogdescription"
+           android:gravity="center"
+           android:textSize="20dp"
+           android:padding="10dp"
+           android:layout_marginTop="15dp"/>
+<!--       <Button-->
+<!--           android:id="@+id/dialogbtn"-->
+<!--           android:layout_width="100dp"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_marginTop="10dp"-->
+<!--           android:layout_marginLeft="38dp"-->
+<!--           android:textSize="20dp"-->
+<!--           android:text="OK"-->
+<!--           android:backgroundTint="@color/orange"-->
+<!--           />-->
+
+   </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cursur">#00BA85</color>
+    <color name="orange">#FF9800</color>
+    <color name="darkblue">#0B4159</color>
+    <color name="red">#F44336</color>
+    <color name="dialogbgcolor">#11FF9800</color>
+    <color name="bgorang">#F6D5A3</color>
+</resources>
