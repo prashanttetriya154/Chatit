@@ -2,16 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MassageActivity">
 
     <LinearLayout
         android:id="@+id/layout_chat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:gravity="center"
         android:background="@color/bgorang"
-        app:layout_constraintBottom_toTopOf="@+id/recycler_gchat"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_chat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,29 +44,30 @@
             android:layout_height="wrap_content"
             android:id="@+id/usernametv"
             android:text="User name"
-            android:layout_marginTop="11dp"
             android:layout_marginStart="10dp"
             android:textSize="20sp"
+            android:layout_weight="1"
             />
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
-
-        </RelativeLayout>
+       <ImageButton
+           android:id="@+id/messagemenu"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:background="@android:color/transparent"
+           android:src="@drawable/baseline_more_vert_24"
+           />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_gchat"
+        android:id="@+id/recycler_chat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
         app:layout_constrainedHeight="true"
-        app:layout_constraintBottom_toTopOf="@+id/text_gchat_indicator"
+        app:layout_constraintBottom_toTopOf="@+id/text_chat_indicator"
         app:layout_constraintTop_toBottomOf="@+id/layout_chat" />
 
     <TextView
-        android:id="@+id/text_gchat_indicator"
+        android:id="@+id/text_chat_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -77,10 +81,10 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#e0e0e0"
-        app:layout_constraintBottom_toTopOf="@+id/layout_gchat_chatbox" />
+        app:layout_constraintBottom_toTopOf="@+id/layout_chat_chatbox" />
 
     <RelativeLayout
-        android:id="@+id/layout_gchat_chatbox"
+        android:id="@+id/layout_chat_chatbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,12 +95,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
             android:layout_toStartOf="@+id/sendbtn"
-            android:background="@android:color/transparent"
+            android:background="@drawable/roundedbg"
             android:hint="Enter Message"
             android:inputType="text"
             android:maxLines="6"
+            android:minHeight="48dp"
+            android:padding="10dp"
             tools:ignore="Autofill" />
 
         <Button

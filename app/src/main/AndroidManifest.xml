@@ -15,6 +15,9 @@
         android:theme="@style/Theme.DemoApp"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".MassageActivity"
             android:exported="false" />
         <activity
